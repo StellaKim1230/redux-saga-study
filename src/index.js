@@ -1,16 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import App from './components/App';
-import counterApp from './reducers';
+import { configureStore } from './redux/store'
 
-const store = createStore(counterApp)
 const rootElement = document.getElementById('root')
 
 ReactDOM.render(
-  <Provider store={store}>
+  <Provider store={configureStore}>
     <App />
   </Provider>,
   rootElement
 )
+
+// example movie open api
+// https://api.themoviedb.org/3/movie/550?api_key=71962ad6d2c75c9a679e97a46ec37c70
