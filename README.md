@@ -1,68 +1,22 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## redux example
+* store: React.js 프로젝트에서 사용하는 모든 동적 데이터를 담아두는 곳
+* action: 어떤 변화가 일어나야 할 지 나타내는 객체
+* reducer: action 객체를 받았을 때, 데이터를 어떻게 바꿀지 처리할지 정의하는 객체.
 
-## Available Scripts
+### reducer는 순수함수여야 한다.
+- redux에선 어플리케이션 state를 직접 변경하는것을 허용하지 않는다. action 객체를 처리하는 함수이다. action은 어떤 변화를 일어나야 할 지 알려주는 객체라면, reducer는 그 정보를 받고 애플리케이션의 상태를 어떻게 바꿀지 정의한다고 볼 수 있다.
 
-In the project directory, you can run:
+순수함수란
+* 외부 네트워크 혹은 데이터베이스에 접근하지 않아야 한다.
+* return 값은 오직 parameter 값에만 의존되어야 한다.
+* 인수는 변경되지 않아야한다.
+* 같은 인수로 실행된 함수는 언제나 같은 결과를 반환해야 한다.
+* 순수하지 않은 API 호출을 하지 말아야 한다.
 
-### `yarn start`
+- redux 컴포넌트인 `<Provider>` 에 store을 설정해주면 그 하위 컴포넌트들에 따로 parent-child 구조로 전달해주지 않아도 connect될 때 store에 접근 할 수 있게 해준다.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### redux는 velopert 님의 블로그를 보고 공부하였습니다.
+[참고자료](https://velopert.com/1226)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### redux-saga는 아래 링크를 참고하였습니다.
+[참고자료](https://github.com/reactkr/learn-react-in-korean/blob/master/translated/deal-with-async-process-by-redux-saga.md)
