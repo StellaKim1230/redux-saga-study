@@ -17,6 +17,3 @@
 
 ### redux는 velopert 님의 블로그를 보고 공부하였습니다.
 [참고자료](https://velopert.com/1226)
-
-### redux-saga는 아래 링크를 참고하였습니다.
-[참고자료](https://github.com/reactkr/learn-react-in-korean/blob/master/translated/deal-with-async-process-by-redux-saga.md)
