@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 import createSagaMiddleware from 'redux-saga'
+import { composeWithDevTools } from 'redux-devtools-extension'
 
 import App from './components/App';
 import reducer from './redux/reducers'
@@ -13,7 +14,9 @@ const sagaMiddleware = createSagaMiddleware()
 const store = createStore(
   reducer,
   // redux의 미들웨어로 sagaMiddleware를 사용합니다.
-  applyMiddleware(sagaMiddleware)
+  composeWithDevTools(
+    applyMiddleware(sagaMiddleware)
+  )
 )
 
 sagaMiddleware.run(rootSaga)

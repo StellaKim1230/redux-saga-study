@@ -1,10 +1,8 @@
 import { combineReducers } from 'redux'
-import counterReducer from './counter'
-import extraReducer from './extra'
+import movieRedecer from './movie'
 
 const reducers = combineReducers({
-  counter: counterReducer,
-  extra: extraReducer,
+  movie: movieRedecer,
 })
 
 export default reducers

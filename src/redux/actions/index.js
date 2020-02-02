@@ -1,22 +1,6 @@
-export const INCREMET = 'INCREMET'
-export const DECREMENT = 'DECREMENT'
-export const SET_DIFF = 'SET_DIFF'
+export const GET_MOVIES = 'GET_MOVIES'
+export const MOVIE_RECEIVED = 'MOVIE_RECEIVED'
 
-export const increment = () => {
-  return {
-    type: INCREMET
-  }
-}
-
-export const decrement = () => {
-  return {
-    type: DECREMENT
-  }
-}
-
-export const setDiff = (value) => {
-  return {
-    type: SET_DIFF,
-    diff: value,
-  }
-}
+export const getMovies = () => ({
+  type: GET_MOVIES
+})

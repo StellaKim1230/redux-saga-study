@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { increment, decrement } from '../redux/actions'
+import { getMovies } from '../redux/actions'
 
 class Buttons extends Component {
   render() {
@@ -8,15 +8,9 @@ class Buttons extends Component {
       <div>
         <button
           type="button"
-          onClick={this.props.onIncrement}
+          onClick={this.props.GetMovies}
         >
-          +
-        </button>
-        <button
-          type="button"
-          onClick={this.props.onDecrement}
-        >
-          -
+          press to see movies
         </button>
       </div>
     )
@@ -24,8 +18,7 @@ class Buttons extends Component {
 }
 
 const mpaDispatchToProps = (dispatch) => ({
-  onIncrement: () => dispatch(increment()),
-  onDecrement: () => dispatch(decrement()),
+  GetMovies: () => dispatch(getMovies()),
 })
 
 export default connect(
